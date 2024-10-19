@@ -46,14 +46,14 @@ body{
   flex-direction: column;
 }
 
-.connect .left form .email, .password{
+.connect .left form .email, .password, .nom, .numero{
   display: flex;
   flex-direction: column;
   margin-bottom: 1em;
   font-family: poppins;
 }
 
-.email input, .password input{
+.email input, .password input, .nom input, .numero input{
   width: 26em;
   height: 2.5em;
   border-radius: 4px;
@@ -61,7 +61,7 @@ body{
   font-size: 1.2em;
 }
 
-.email input:focus, .password input:focus{
+.email input:focus, .password input:focus, .nom input:focus, .numeros input:focus{
   outline: none;
 }
 
