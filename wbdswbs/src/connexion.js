@@ -22,6 +22,10 @@ const Connexion = () => {
         axios.post('http://localhost:3001/api/auth/login', {
             email: mail,
             password: pwd
+        }).then(res => {
+            console.log(res.data)
+        }).catch(error => {
+            console.log('Vous avez une erreur dans votre code' ,error)
         })
         setPwd('')
         setMail('')
