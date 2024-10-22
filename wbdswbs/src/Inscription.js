@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 const Inscription = () => {
     return(
         <div className="connect">
@@ -26,13 +28,16 @@ const Inscription = () => {
                     </div>
 
                     <div className="btn">
-                        <button type="submit">Se connecter</button>
+                        <button type="submit">S'inscrire</button>
                     </div>
                 </form>
+                <span>
+                    Vous avez déjà un compte ? <Link className="toco" to="/inscription">Connectez vous</Link>
+                </span>
             </div>
 
             <div className="right">
-                <img src="https://i.imgur.com/6Q7b3Z9.png" alt="" />
+                <img src="" alt="" />
             </div>
 
         </div>
