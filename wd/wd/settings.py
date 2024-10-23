@@ -38,7 +38,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'wd2',
+    'rest_framework',
+    'corsheaders',
+
 ]
+
+CORS_ALLOWED_ORIGINS = ['https://localhost:5173']
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

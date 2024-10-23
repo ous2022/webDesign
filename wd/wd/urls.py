@@ -15,7 +15,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
 from wd import views
 
@@ -25,4 +25,5 @@ urlpatterns = [
     #path('accueil',views.accueil,name='accueil'),
     path('deconnexion',views.decoClient,name='deconnexion'),
     path('inscription',views.inscription,name='inscription'),
+    path('api/',include('wd.api.urls')),
 ]
