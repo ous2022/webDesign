@@ -4,6 +4,15 @@
   box-sizing: border-box;
 }
 
+body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100vw;
+  height: 100vh;
+  font-family: poppins;
+}
+
 .navbar{
   background-color: #FF5722;
   height: 65px;
@@ -11,6 +20,8 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 3em;
+  position: sticky;
+  margin-top: 0;
 }
 
 .navbar h1 {
@@ -52,13 +63,6 @@
   margin: 0 0.2em;
 }
 
-body{
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  width: 100vw;
-  height: 100vh;
-}
 
 main {
   display: flex;
@@ -137,6 +141,47 @@ main .firstmain{
   color: #fff;
   border: none;
   border-radius: 0.5em;
+}
+
+.secondMain {
+  display: flex;
+  justify-content: space-evenly;
+  background: rgba(33, 33, 33, 0.7);
+  height: 30em;
+  padding: 4em;
+}
+
+.secondMain .item{
+  height: 22em;
+  background: rgba(33, 33, 33, 0.69);
+  width: 20em;
+  padding: 2em;
+  border: none;
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.secondMain .item .roundBox {
+  background: rgba(255, 255, 255, 0.5);
+  width: 4.5em;
+  height: 4.5em;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 100em; */
+}
+
+.secondMain .item h2{
+  font-size: 1.7em;
+  font-weight: 600;
+  margin-top: 1em;
+}
+
+.secondMain .item p{
+  margin-top: 1em;
 }
 
 .connect{
@@ -227,3 +272,4 @@ span{
   background: #FF5722;
   height: 100vh;
 }
+
