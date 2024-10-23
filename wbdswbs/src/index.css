@@ -4,12 +4,139 @@
   box-sizing: border-box;
 }
 
+.navbar{
+  background-color: #FF5722;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3em;
+}
+
+.navbar h1 {
+  color: white;
+  font-size: 2em;
+  font-weight: 600;
+}
+
+.navbar .links{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.navbar .links .navlink{
+  color: white;
+  text-decoration: none;
+  margin: 0 1em;
+}
+
+.navbar .nav-right{
+  display: flex;
+  align-items: center;
+  /* background-color: #fff; */
+}
+
+.nav-link{
+  color: #fff;
+  text-decoration: none;
+  margin: 0 0.5em;
+  font-size: 1.4em;
+  display: flex;
+  align-items: center;
+}
+
+.nav-link img{
+  width: 25px;
+  margin: 0 0.2em;
+}
+
 body{
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   width: 100vw;
   height: 100vh;
+}
+
+main {
+  display: flex;
+  background-size: cover;
+  flex-direction: column;
+  width: 100%;
+  
+}
+
+main .firstmain{
+  height: 91vh;
+  background: url(./Assets/image.png) no-repeat;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  background-size: cover;  
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.firstmain .searchBar{
+  display: flex;
+  align-items: center;
+  height: 2.5em;
+  /* background: #000; */
+}
+
+.firstmain .searchBar input{
+  height: 100%;
+  width: 40em;
+  display: flex;
+  padding: 0 2em;
+  align-items: center;
+  border: 0.1em solid #FF5722;
+  color: #333;
+  border-radius: 100em;
+  outline: none;
+  position: relative;
+  left: 2.5em;
+}
+
+.firstmain .searchBar button{
+  background-color: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FF5722;
+  border-radius: 100em;
+  width: 5em;
+  position: relative;
+  right: 2.59em;
+  height: 100%;
+}
+
+.firstmain .searchBar button img{
+  height: 2.45em;
+}
+
+.firstmain .logo{
+  font-size: 2em;
+  font-weight: bold;
+  color: #333;
+}
+
+.accueilBtn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 12em;
+  height: 2.6em;
+  background: #FF5722;
+  text-decoration: none;
+  color: #fff;
+  border: none;
+  border-radius: 0.5em;
 }
 
 .connect{
@@ -97,6 +224,6 @@ span{
 
 .connect .right{
   width: 50%;
-  background: #f0f;
+  background: #FF5722;
   height: 100vh;
 }
