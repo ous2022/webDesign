@@ -4,10 +4,10 @@ import { Link } from "react-router-dom"
 
 const Inscription = () => {
 
-    const [name, setName] = useState('')
-    const [mail, setMail] = useState('')
-    const [number, setNumber] = useState('')
-    const [password, setPassword] = useState('')
+    const [nom_complet, setName] = useState('')
+    const [mail_client, setMail] = useState('')
+    const [numero_de_telephone, setNumber] = useState('')
+    const [mot_de_passe, setPassword] = useState('')
 
 
     const handleName = (e) => {
@@ -29,11 +29,11 @@ const Inscription = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
 
-        axios.post('http://localhost:3001/api/auth/register', {
-            nom: name,
-            email: mail,
-            numero: number,
-            password: password
+        axios.post('http://127.0.0.1:8000/api/inscription', {
+            nom: nom_complet,
+            email: mail_client,
+            numero: numero_de_telephone,
+            password: mot_de_passe,
         }).then(res => {
             console.log(res.data)
         }).catch(err => {
@@ -58,19 +58,19 @@ const Inscription = () => {
                 <form onSubmit={handleSubmit}>
                     <div className="nom">
                         <label htmlFor="nom">Nom Complet</label>
-                        <input type="nom" id="nom" name="nom" value={name} onChange={handleName} />
+                        <input type="nom" id="nom" name="nom" value={nom_complet} onChange={handleName} />
                     </div>
                     <div className="email">
                         <label htmlFor="email">Email</label>
-                        <input type="email" id="email" name="email" value={mail} onChange={handleMail} />
+                        <input type="email" id="email" name="email " value={mail_client} onChange={handleMail} />
                     </div>
                     <div className="numero">
                         <label htmlFor="numero">Numero de telephone</label>
-                        <input type="tel" id="numero" name="numero" value={number} onChange={handleNumber} />
+                        <input type="tel" id="numero" name="numero" value={numero_de_telephone} onChange={handleNumber} />
                     </div>
                     <div className="password">
                         <label htmlFor="password">Mot de passe</label>
-                        <input type="password" id="password" name="password" value={password} onChange={handlePassword} />
+                        <input type="password" id="password" name="password" value={mot_de_passe} onChange={handlePassword} />
                     </div>
 
                     <div className="btn">

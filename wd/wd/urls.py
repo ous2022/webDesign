@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-
+from wd2.api.urls import connexion_router, inscription_router
 from wd import views
 
 urlpatterns = [
@@ -25,5 +25,6 @@ urlpatterns = [
     #path('accueil',views.accueil,name='accueil'),
     path('deconnexion',views.decoClient,name='deconnexion'),
     path('inscription',views.inscription,name='inscription'),
-    path('api/',include('wd.api.urls')),
+    path('api/', include(connexion_router.urls)), #pour la co
+    path('api/', include(inscription_router.urls)), #pour l'inscription
 ]
