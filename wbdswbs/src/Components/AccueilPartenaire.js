@@ -52,10 +52,6 @@ const AccueilPartenaire = () => {
             console.log('Encore une erreur', err)
         })
 
-        
-
-
-
     }
 
 
