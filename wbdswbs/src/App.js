@@ -5,12 +5,14 @@ import Accueil from './Components/accueil'
 import ErrorPage from './Components/ErrorPage'
 import ConnexionPartenaire from './ConnexionPartenaire'
 import AccueilPartenaire from './Components/AccueilPartenaire'
+import PageProduit from './Components/PageProduit'
 
 const App = () => {
     return(
         <Routes>
             <Route path="/" element={<Accueil />} />
             <Route path="/accueil" element={<Accueil />} />
+            <Route path="/pageProduit" element={<PageProduit />} />
             <Route path="/connexion" element={<Connexion />} />
             <Route path='/connexionPartenaire' element={<ConnexionPartenaire />} />
             <Route path="/inscription" element={<Inscription />} />

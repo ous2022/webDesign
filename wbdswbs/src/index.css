@@ -360,3 +360,100 @@ textarea{
 .btn-ajouter:hover {
   background-color: #E64A19;
 }
+
+.corps {
+  display: flex;
+  max-width: 1200px;
+  margin: 2rem auto;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* overflow: hidden; */
+}
+
+.corps .gauche {
+  width: 50%;
+  background: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.corps .gauche img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.corps .droite {
+  width: 50%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.corps .droite h3 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.corps .droite h1 {
+  font-size: 2.5rem;
+  color: #FF5722;
+  margin-bottom: 1.5rem;
+}
+
+.corps .droite p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+  /* max-height: 200px; */
+  /* overflow-y: auto; */
+  padding-right: 10px;
+}
+
+.corps .droite button {
+  padding: 10px 20px;
+  background-color: #FF5722;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.corps .droite button:hover {
+  background-color: #E64A19;
+}
+
+@media (max-width: 768px) {
+  .corps {
+    flex-direction: column;
+  }
+
+  .corps .gauche,
+  .corps .droite {
+    width: 100%;
+  }
+
+  .corps .droite button {
+    padding: 10px 20px;
+    background-color: #FF5722;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .corps .droite button:hover {
+    background-color: #E64A19;
+  }
+}
