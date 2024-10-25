@@ -321,19 +321,37 @@ span{
   width: 100%;
   max-width: 500px;
 }
-h2 {
+
+.block{
+  margin: 1em 0;
+  text-align: center;
+}
+
+.block p{
+  color: #FF5722;
+}
+
+.block h1{
+  font-weight: 600;
+  color: #333;
+}
+
+.card-ajouter-produit h2 {
   text-align: center;
   color: #333;
   margin-bottom: 1.5rem;
 }
+
 .form-group {
   margin-bottom: 1rem;
 }
+
 label {
   display: block;
   margin-bottom: 0.5rem;
   color: #666;
 }
+
 input, textarea, select {
   width: 100%;
   padding: 0.5rem;
@@ -342,10 +360,12 @@ input, textarea, select {
   font-size: 1rem;
   box-sizing: border-box;
 }
+
 textarea{
   resize: none;
   min-height: 100px
 }
+
 .btn-ajouter {
   width: 100%;
   padding: 0.75rem;
@@ -357,6 +377,7 @@ textarea{
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
+
 .btn-ajouter:hover {
   background-color: #E64A19;
 }
@@ -456,4 +477,84 @@ textarea{
   .corps .droite button:hover {
     background-color: #E64A19;
   }
+}
+
+.panier-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.panier-container h1 {
+  color: #333;
+  text-align: center;
+}
+
+.panier-items {
+  margin-top: 20px;
+}
+
+.panier-item {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding: 15px 0;
+}
+
+.panier-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.item-details {
+  flex-grow: 1;
+}
+
+.item-details h2 {
+  margin: 0;
+  color: #333;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.quantity-controls button {
+  background-color: #FF5722;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.quantity-controls span {
+  margin: 0 10px;
+}
+
+.remove-item {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.panier-summary {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.checkout-button {
+  background-color: #FF5722;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
 }

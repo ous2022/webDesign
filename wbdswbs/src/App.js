@@ -6,6 +6,7 @@ import ErrorPage from './Components/ErrorPage'
 import ConnexionPartenaire from './ConnexionPartenaire'
 import AccueilPartenaire from './Components/AccueilPartenaire'
 import PageProduit from './Components/PageProduit'
+import Panier from './Components/Panier'
 
 const App = () => {
     return(
@@ -17,6 +18,7 @@ const App = () => {
             <Route path='/connexionPartenaire' element={<ConnexionPartenaire />} />
             <Route path="/inscription" element={<Inscription />} />
             <Route path="/accueilPartenaire" element={<AccueilPartenaire />} />
+            <Route path="/panier" element={<Panier />} />
             <Route path='/*' element={< ErrorPage />} />
         </Routes>
     )
