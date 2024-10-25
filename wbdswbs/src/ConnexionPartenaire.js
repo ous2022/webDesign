@@ -2,11 +2,15 @@ import { useState } from "react"
 import { Link } from "react-router-dom"
 import axios from 'axios'
 
-const Connexion = () => {
+const ConnexionPartenaire = () => {
 
-
+    // const [code, setCode] = useState('')
     const [mail, setMail] = useState('')
     const [pwd, setPwd] = useState('')
+
+    /* const handleCode = (e) => {
+        setCode(e.target.value)
+    } */
 
     const handleMail = (e) => {
         setMail(e.target.value)
@@ -20,6 +24,7 @@ const Connexion = () => {
         e.preventDefault()
         console.log(mail, pwd)
         axios.post('http://localhost:3001/api/auth/login', {
+            // code: code,
             email: mail,
             password: pwd
         }).then(res => {
@@ -37,10 +42,14 @@ const Connexion = () => {
             <div className="left">
                 <h1>Connexion</h1>
                 <p>
-                    Connectez-vous ici pour acceder à notre site dans son integralité
+                    Connectez-vous ici pour pour pouvoir ajouter des articles au panier
                 </p>
 
                 <form onSubmit={submitFom}>
+                    {/* <div className="code">
+                        <label htmlFor="code">Code</label>
+                        <input type="text" id="code" name="code" value={code} onChange={handleCode} />
+                    </div> */}
                     <div className="email">
                         <label htmlFor="email">Email</label>
                         <input type="email" id="email" name="email" value={mail} onChange={handleMail} />
@@ -67,4 +76,4 @@ const Connexion = () => {
     )
 }
 
-export default Connexion
+export default ConnexionPartenaire

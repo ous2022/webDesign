@@ -1,7 +1,11 @@
-const Produit = () => {
+import linge from '../Assets/linge.png'
+
+const Produit = ({nomProduit, prix}) => {
     return(
         <div className="produit">
-            <h1>My product</h1>
+            <img src={linge} alt="" />
+            <h2>{nomProduit}</h2>
+            <strong>{prix} FCFA</strong>
         </div>
     )
 }

@@ -184,6 +184,39 @@ main .firstmain{
   margin-top: 1em;
 }
 
+.thirdMain {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: center;
+  gap: 1em 1em;
+  padding: 2em;
+}
+
+.thirdMain .produit {
+  background: rgba(51, 51, 51, 0.2);
+  border-radius: 1em;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 20em;
+  /* margin: 0.5em; */
+}
+
+.thirdMain .produit img{
+  width: 10em;
+}
+
+.thirdMain .produit h2{
+  font-size: 1.7em;
+  color: #333;
+}
+
+.thirdMain .produit strong{
+  font-size: 1.8em;
+  color: #FF5722;
+}
+
 .connect{
   height: 100%;
   display: flex;
@@ -218,14 +251,14 @@ main .firstmain{
   flex-direction: column;
 }
 
-.connect .left form .email, .password, .nom, .numero{
+.connect .left form .email, .password, .nom, .numero, .code{
   display: flex;
   flex-direction: column;
   margin-bottom: 1em;
   font-family: poppins;
 }
 
-.email input, .password input, .nom input, .numero input{
+.email input, .password input, .nom input, .numero input, .code input{
   width: 26em;
   height: 2.5em;
   border-radius: 4px;
@@ -233,7 +266,7 @@ main .firstmain{
   font-size: 1.2em;
 }
 
-.email input:focus, .password input:focus, .nom input:focus, .numeros input:focus{
+.email input:focus, .password input:focus, .nom input:focus, .numero input:focus, .code input:focus{
   outline: none;
 }
 
@@ -273,3 +306,57 @@ span{
   height: 100vh;
 }
 
+.ajouterProduit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+.card-ajouter-produit {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+}
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+.form-group {
+  margin-bottom: 1rem;
+}
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #666;
+}
+input, textarea, select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+textarea{
+  resize: none;
+  min-height: 100px
+}
+.btn-ajouter {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #FF5722;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.btn-ajouter:hover {
+  background-color: #E64A19;
+}
