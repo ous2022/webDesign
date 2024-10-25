@@ -58,16 +58,20 @@ const Accueil = () => {
                     </div>
                 </div>
 
-                <div className="thirdMain">
-                    <Produit nomProduit='Lave Linge' prix='50 000' />
-                    <Produit nomProduit='Lave Linge' prix='50 000' />
-                    <Produit nomProduit='Lave Linge' prix='50 000' />
-                    <Produit nomProduit='Lave Linge' prix='50 000' />
-                    <Produit nomProduit='Lave Linge' prix='50 000' />
-                    <Produit nomProduit='Lave Linge' prix='50 000' />
-                    <Produit nomProduit='Lave Linge' prix='50 000' />
-                    <Produit nomProduit='Lave Linge' prix='50 000' />
-                    <Produit nomProduit='Lave Linge' prix='50 000' />
+                <div className="block">
+                    <p>Explorez des produits impressionnants</p>
+                    <h1>Recommandé pour vous</h1>
+                    <div className="thirdMain">
+                        <Produit nomProduit='Lave Linge' prix='50 000' />
+                        <Produit nomProduit='Lave Linge' prix='50 000' />
+                        <Produit nomProduit='Lave Linge' prix='50 000' />
+                        <Produit nomProduit='Lave Linge' prix='50 000' />
+                        <Produit nomProduit='Lave Linge' prix='50 000' />
+                        <Produit nomProduit='Lave Linge' prix='50 000' />
+                        <Produit nomProduit='Lave Linge' prix='50 000' />
+                        <Produit nomProduit='Lave Linge' prix='50 000' />
+                        <Produit nomProduit='Lave Linge' prix='50 000' />
+                    </div>
                 </div>
 
 
