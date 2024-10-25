@@ -21,10 +21,8 @@ from wd import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('connexion',views.connexion,name='connexion'),
     #path('accueil',views.accueil,name='accueil'),
     path('deconnexion',views.decoClient,name='deconnexion'),
-    path('inscription',views.inscription,name='inscription'),
     path('api/', include(connexion_router.urls)), #pour la co
     path('api/', include(inscription_router.urls)), #pour l'inscription
     path('api/', include(apanier_router.urls)), #pour les articles dans le panier

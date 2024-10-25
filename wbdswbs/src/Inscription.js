@@ -29,11 +29,11 @@ const Inscription = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
 
-        axios.post('http://127.0.0.1:8000/api/inscription', {
-            nom: nom_complet,
-            email: mail_client,
-            numero: numero_de_telephone,
-            password: mot_de_passe,
+        axios.post('http://127.0.0.1:8000/api/inscription/', {
+            nom_complet: nom_complet,
+            mail_client: mail_client,
+            numero_de_telephone: numero_de_telephone,
+            mot_de_passe: mot_de_passe,
         }).then(res => {
             console.log(res.data)
         }).catch(err => {

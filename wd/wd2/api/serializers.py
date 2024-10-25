@@ -9,7 +9,7 @@ class connexionSerializer(ModelSerializer):
     class Meta:
         #nom du modele
         model = Client
-        fields = ['email','mot_de_passe']
+        fields = ['mail_client','mot_de_passe']
 
 # serializer pour la vue de connexion du prestataire
 class prestataireSerializer(ModelSerializer):

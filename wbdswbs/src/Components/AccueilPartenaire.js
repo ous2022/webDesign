@@ -33,14 +33,14 @@ const AccueilPartenaire = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        console.log(nomProduit,  descriptionProduit, prixProduit, imageProduit, categorie)
+        console.log(nom,  description, prix, image, categorie)
 
-        axios.post('http://127.0.0.1:8000/api/produit', {
-            nomProduit: nomProduit,
-            descriptionProduit: descriptionProduit,
-            prixProduit: prixProduit,
-            imageProduit: imageProduit,
-            categorieProduit: categorie
+        axios.post('http://127.0.0.1:8000/api/produit/', {
+            nom: nom,
+            description: description,
+            prix: prix,
+            image: image,
+            categorie: categorie
         }).then(res => {
             console.log(res.data)
             setCategorie('')

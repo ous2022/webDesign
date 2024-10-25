@@ -6,8 +6,7 @@ const Panier = () => {
 
     const prix = 50000
 
-    const [nbre, setNbre] = useState(1)
-    
+    const [nbre, setNbre] = useState(1)      
     const add = () => {
         setNbre(nbre + 1)
     }

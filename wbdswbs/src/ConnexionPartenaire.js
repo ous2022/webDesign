@@ -22,11 +22,11 @@ const ConnexionPartenaire = () => {
 
     const submitFom = (e) => {
         e.preventDefault()
-        console.log(mail, pwd)
-        axios.post('http://127.0.0.1:8000/api/prestataire', {
+        console.log(email, mot_de_passe)
+        axios.post('http://127.0.0.1:8000/api/prestataire/', {
             // code: code,
-            email: mail,
-            password: pwd
+            email: email,
+            mot_de_passe: mot_de_passe,
         }).then(res => {
             console.log(res.data)
         }).catch(error => {
