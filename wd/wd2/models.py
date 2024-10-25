@@ -8,15 +8,17 @@ from django.contrib.auth.models import User
 class Categorie(models.Model):
     nom = models.CharField(max_length=100)
     description = models.TextField(blank=True)
+    def __str__(self):
+        return self.nom
 
 # Modèle de Produit
 class Produit(models.Model):
     nom = models.CharField(max_length=200)
     description = models.TextField()
     prix = models.DecimalField(max_digits=10, decimal_places=2)
-    quantite_en_stock = models.PositiveIntegerField()
+    quantite_en_stock = models.PositiveIntegerField(blank=True, null=True)
     categorie = models.ForeignKey(Categorie, on_delete=models.CASCADE)
-    marque = models.CharField(max_length=100)
+    marque = models.CharField(max_length=100,blank=True, null=True)
     image = models.ImageField(upload_to='produits/')
     date_ajout = models.DateTimeField(auto_now_add=True)
     note = models.FloatField(default=0.0)

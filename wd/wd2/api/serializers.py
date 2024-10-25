@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from rest_framework.serializers import ModelSerializer
-from wd2.models import Client
+from wd2.models import *
 
 from wd.views import connexion, inscription
 
@@ -9,7 +9,14 @@ class connexionSerializer(ModelSerializer):
     class Meta:
         #nom du modele
         model = Client
-        fields = ['mail_client','mot_de_passe']
+        fields = ['email','mot_de_passe']
+
+# serializer pour la vue de connexion du prestataire
+class prestataireSerializer(ModelSerializer):
+    class Meta:
+        #nom du modele
+        model = Prestataire
+        fields = ['email','mot_de_passe']
 
 #serializer pour la vue de l'inscription
 class inscriptionSerializer(ModelSerializer):
@@ -21,16 +28,23 @@ class inscriptionSerializer(ModelSerializer):
         }
 
 
+#serializer pour les articles dans le panier
+class ArticlePanierSerializer(ModelSerializer):
+    class Meta:
+        model = ArticlePanier
+        fields = ['panier','produit','quantite']
 
+#serializzer pour l'ajout de produits
+class ProduitSerializer(ModelSerializer):
+    class Meta:
+        model = Produit
+        fields = ['nom','description','prix','categorie','image']
 
+#serializer pour les categories
+class CategorieSerializer(ModelSerializer):
+    class Meta:
+        model = Categorie
+        fields = ['nom','description']
+    
 
-
-    # Fonction pour crypter le mot de passe lors de la sauvegarde
-    """def create(self, validated_data):
-        utilisateur = Utilisateur(
-            nom=validated_data['nom'],
-            email=validated_data['email']
-        )
-        utilisateur.set_password(validated_data['mot_de_passe'])
-        utilisateur.save()
-        return utilisateur"""
+    

@@ -5,10 +5,10 @@ import axios from "axios"
 
 const AccueilPartenaire = () => {
 
-    const [nomProduit, setNomProduit] = useState('')
-    const [descriptionProduit, setDescriptionProduit] = useState('')
-    const [prixProduit, setPrixProduit] = useState('')
-    const [imageProduit, setImageProduit] = useState('')
+    const [nom, setNomProduit] = useState('')
+    const [description, setDescriptionProduit] = useState('')
+    const [prix, setPrixProduit] = useState('')
+    const [image, setImageProduit] = useState('')
     const [categorie, setCategorie] = useState('')
 
     const handleProductName = (e) => {
@@ -35,7 +35,7 @@ const AccueilPartenaire = () => {
         e.preventDefault()
         console.log(nomProduit,  descriptionProduit, prixProduit, imageProduit, categorie)
 
-        axios.post('http://localhost:3001/api/auth/ajoutproduit', {
+        axios.post('http://127.0.0.1:8000/api/produit', {
             nomProduit: nomProduit,
             descriptionProduit: descriptionProduit,
             prixProduit: prixProduit,
@@ -65,15 +65,15 @@ const AccueilPartenaire = () => {
                     <form onSubmit={handleSubmit}>
                         <div className="nom-produit">
                             <label htmlFor="nom-produit">Nom du produit</label>
-                            <input type="text" id="nom-produit" name="nomProduit" value={nomProduit} onChange={handleProductName} required />
+                            <input type="text" id="nom-produit" name="nomProduit" value={nom} onChange={handleProductName} required />
                         </div>
                         <div className="description-produit">
                             <label htmlFor="description-produit">Description</label>
-                            <textarea id="description-produit" name="descriptionProduit" value={descriptionProduit} onChange={handleProductDes} rows="3" required></textarea>
+                            <textarea id="description-produit" name="descriptionProduit" value={description} onChange={handleProductDes} rows="3" required></textarea>
                         </div>
                         <div className="prix-produit">
                             <label htmlFor="prix-produit">Prix</label>
-                            <input type="number" id="prix-produit" name="prixProduit" min="0" value={prixProduit} onChange={handleProductPrice} step="1" required />
+                            <input type="number" id="prix-produit" name="prixProduit" min="0" value={prix} onChange={handleProductPrice} step="1" required />
                         </div>
                         <div className="categorie-produit">
                             <label htmlFor="categorie-produit">Catégorie</label>
@@ -86,7 +86,7 @@ const AccueilPartenaire = () => {
                         </div>
                         <div className="image-produit">
                             <label htmlFor="image-produit">Image du produit</label>
-                            <input type="file" id="image-produit" name="imageProduit" accept="image/*" value={imageProduit} onChange={handleProductImage} required />
+                            <input type="file" id="image-produit" name="imageProduit" accept="image/*" value={image} onChange={handleProductImage} required />
                         </div>
                         <div className="btn">
                             <button type="submit">Ajouter le produit</button>

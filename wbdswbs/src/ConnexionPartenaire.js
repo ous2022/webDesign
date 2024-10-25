@@ -5,8 +5,8 @@ import axios from 'axios'
 const ConnexionPartenaire = () => {
 
     // const [code, setCode] = useState('')
-    const [mail, setMail] = useState('')
-    const [pwd, setPwd] = useState('')
+    const [email, setMail] = useState('')
+    const [mot_de_passe, setPwd] = useState('')
 
     /* const handleCode = (e) => {
         setCode(e.target.value)
@@ -23,7 +23,7 @@ const ConnexionPartenaire = () => {
     const submitFom = (e) => {
         e.preventDefault()
         console.log(mail, pwd)
-        axios.post('http://localhost:3001/api/auth/login', {
+        axios.post('http://127.0.0.1:8000/api/prestataire', {
             // code: code,
             email: mail,
             password: pwd
@@ -52,11 +52,11 @@ const ConnexionPartenaire = () => {
                     </div> */}
                     <div className="email">
                         <label htmlFor="email">Email</label>
-                        <input type="email" id="email" name="email" value={mail} onChange={handleMail} />
+                        <input type="email" id="email" name="email" value={email} onChange={handleMail} />
                     </div>
                     <div className="password">
                         <label htmlFor="password">Mot de passe</label>
-                        <input type="password" id="password" name="password" value={pwd} onChange={handlePwd} />
+                        <input type="password" id="password" name="password" value={mot_de_passe} onChange={handlePwd} />
                     </div>
 
                     <div className="btn">

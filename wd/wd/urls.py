@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from wd2.api.urls import connexion_router, inscription_router
+from wd2.api.urls import connexion_router, inscription_router,apanier_router,produit_router,prestataire_router,categorie_router
 from wd import views
 
 urlpatterns = [
@@ -27,4 +27,11 @@ urlpatterns = [
     path('inscription',views.inscription,name='inscription'),
     path('api/', include(connexion_router.urls)), #pour la co
     path('api/', include(inscription_router.urls)), #pour l'inscription
+    path('api/', include(apanier_router.urls)), #pour les articles dans le panier
+    path('api/', include(produit_router.urls)), #pour l'ajout de produit
+    path('api/', include(prestataire_router.urls)), #pour la connexion prestataire
+    path('api/', include(categorie_router.urls)), #pour la categorie
+
+
+    
 ]
